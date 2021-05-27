@@ -46,7 +46,7 @@ class Game {
     Player.getPlayerInfo();
     
     if(allPlayers !== undefined){
-      background(rgb(198,135,103));
+      background("#424242");
       image(track, 0,-displayHeight*4,displayWidth, displayHeight*5);
       
       //var display_position = 100;
@@ -70,6 +70,10 @@ class Game {
         cars[index-1].y = y;
 
         if (index === player.index){
+          fill("lightblue");
+          stroke("blue");
+          strokeWeight(2)
+          ellipse(x,y,150,240)
           cars[index - 1].shapeColor = "red";
           camera.position.x = displayWidth/2;
           camera.position.y = cars[index-1].y;
